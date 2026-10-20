@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChanceLab - Zar & Yazı-Tura Simülasyonu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="simulator-container">
+        <h1>🎲 ChanceLab</h1>
+        <p class="subtitle">Olasılık ve istatistik simülasyon paneli</p>
+
+        <div class="tab-buttons">
+            <button class="tab-btn active" id="coinTab">Yazı - Tura</button>
+            <button class="tab-btn" id="diceTab">Zar Atma</button>
+        </div>
+
+        <!-- Yazı Tura Bölümü -->
+        <div id="coinSection" class="section active">
+            <div class="visual-box" id="coinVisual">🪙</div>
+            <div class="action-box">
+                <button id="flipCoinBtn" class="action-btn">Yazı Tura At</button>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span>Yazı</span>
+                    <h3 id="tailCount">0</h3>
+                </div>
+                <div class="stat-box">
+                    <span>Tura</span>
+                    <h3 id="headCount">0</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zar Bölümü -->
+        <div id="diceSection" class="section">
+            <div class="visual-box" id="diceVisual">⚀</div>
+            <div class="action-box">
+                <button id="rollDiceBtn" class="action-btn">Zar At</button>
+            </div>
+            <div class="dice-stats">
+                <p>Toplam Atış: <span id="totalRolls">0</span></p>
+                <p>Sonuç: <span id="diceResult">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
